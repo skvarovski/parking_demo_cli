@@ -4,12 +4,10 @@ object Parking {
     private const val parkingSize = 2
     var parkingList = mutableMapOf<String,Car?>()
 
-    fun createParking(): MutableMap<String, Car?> {
+    fun createParking() {
         for (i in 1 .. parkingSize) {
             parkingList.put("P$i", null)
         }
-
-        return parkingList
     }
 
     fun getParkingFreePlace(): String? {

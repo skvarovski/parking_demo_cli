@@ -5,8 +5,10 @@
 class ManagerService {
 
     private val parking = Parking
-    private val parkingList = parking.createParking()
 
+    init {
+        parking.createParking()
+    }
 
 
     fun parking(cmd: List<String>) {
