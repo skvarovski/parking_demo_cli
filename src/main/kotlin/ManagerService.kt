@@ -12,7 +12,7 @@ class ManagerService {
 
 
     fun parking(cmd: List<String>) {
-        val person = Person(
+        val owner = Owner(
             cmd[5],
             cmd[6]
         )
@@ -20,7 +20,7 @@ class ManagerService {
             cmd[1],
             cmd[2],
             cmd[3],
-            person = person
+            owner = owner
         )
 
         parking.getParkingFreePlace().let {
