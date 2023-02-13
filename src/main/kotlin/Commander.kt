@@ -1,5 +1,9 @@
 import java.lang.Exception
 
+/**
+ *  Класс в котором хранятся все доступные команды
+ */
+
 enum class Commander(val cmd: String) {
     START("/start"),
     HELP("/help"),

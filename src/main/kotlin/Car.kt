@@ -1,3 +1,7 @@
+/**
+ *  Data Class обьекта машина
+ */
+
 data class Car(
     val brand: String,
     val color: String,
