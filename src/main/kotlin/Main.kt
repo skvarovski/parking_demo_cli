@@ -17,8 +17,6 @@ import java.util.Scanner
 fun main(args: Array<String>) {
 
     startParking()
-
-
 }
 
 private fun startParking() {
@@ -47,30 +45,6 @@ private fun startParking() {
             Commander.END -> {
                 println("Завершение работы.")
                 break
-            }
-
-            Commander.PARK -> {
-                if (verifityCommand(cmd, 7)) {
-                    println("park command")
-                    manager.parking(cmd)
-                } else {
-                    println("park command wrong")
-                    continue
-                }
-            }
-
-            Commander.SHOW_PARKING -> {
-                println("show parking command")
-                manager.showParking(cmd)
-            }
-
-            Commander.SHOW_STATS -> {
-                println("show stats command")
-                manager.showStats(cmd)
-            }
-
-            Commander.RETURN -> {
-                println("return command")
             }
 
 

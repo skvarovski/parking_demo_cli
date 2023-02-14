@@ -18,5 +18,4 @@ object Parking {
         return parkingList.filterValues { it == null }.keys.firstOrNull()
     }
 
-
 }
