@@ -61,12 +61,12 @@ private fun startParking() {
                 manager.parkInfoByPlace(cmd)
             }
 
-            Commander.SHOW_PARKING -> {
-                manager.showParking(cmd)
+            Commander.PARK_ALL_STATS -> {
+                manager.showParkAllStats(cmd)
             }
 
-            Commander.SHOW_STATS -> {
-                manager.showStats(cmd)
+            Commander.PARK_STATS -> {
+                manager.showParkStats(cmd)
             }
 
             Commander.RETURN -> {

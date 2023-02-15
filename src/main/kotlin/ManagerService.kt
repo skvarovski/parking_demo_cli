@@ -5,6 +5,7 @@
 class ManagerService {
 
     private val parking = Parking
+    private var countPark = 0
 
     init {
         parking.createParking()
@@ -31,6 +32,7 @@ class ManagerService {
             if (it == null) println("нет свободных мест")
 
             parking.parkingList[it.toString()] = car
+            countPark++
 
             println("Машина встала на парковку ${it.toString()}")
 
@@ -80,7 +82,7 @@ class ManagerService {
 
     fun returnCar(cmd: List<String>) {
         if (!verifityCommand(cmd, 4)) {
-            println("Некоректно введены данные, пожалуйста повторите")
+            println("Некоректно введены данные, пожалуйста повторите: НомерАвто, Имя, Фамилию")
             return
         }
 
@@ -103,11 +105,23 @@ class ManagerService {
 
     }
 
-    fun showParking(cmd: List<String>) {
-
+    fun showParkAllStats(cmd: List<String>) {
+        if (!verifityCommand(cmd, 1)) {
+            println("Некоректно введены данные, пожалуйста повторите")
+            return
+        }
+        println("Количество машин, которые воспользовались парковкой = $countPark")
     }
 
-    fun showStats(cmd: List<String>) {
+    fun showParkStats(cmd: List<String>) {
+        if (!verifityCommand(cmd, 1)) {
+            println("Некоректно введены данные, пожалуйста повторите")
+            return
+        }
+
+        val currentPark = parking.parkingList.filterValues { it !=null }.count()
+
+        println("Количество занятых мест на парковсе = $currentPark")
 
     }
 
